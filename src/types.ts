@@ -1,0 +1,1 @@
+export type CompanyType = {[key: string]: string | number | null | boolean};

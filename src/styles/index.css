@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.mosaic-window .mosaic-window-toolbar,
+ .mosaic-preview .mosaic-window-toolbar {
+  height: auto;
+  padding: 10px;
+}
+
+.mosaic-window .mosaic-window-title,
+.mosaic-preview .mosaic-window-title {
+  font-size: 18px;
+}
+
+.mosaic-window .mosaic-window-body,
+.mosaic-preview .mosaic-window-body {
+  overflow: scroll;
+  padding: 0.5rem;
+}
+
+.mosaic.mosaic-blueprint-theme {
+  background: transparent;;
+}
+
+.mosaic-tile {
+  position: static;
+}
+
+@media (min-width: 768px) {
+  .mosaic.mosaic-blueprint-theme {
+    background: #abb3bf;;
+  }
+
+  .mosaic-tile {
+    position: absolute;
+  }
+}

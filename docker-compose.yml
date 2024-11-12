@@ -1,0 +1,26 @@
+version: '3.8'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5173:5173"
+    volumes:
+      - .:/companies
+      - /companies/node_modules
+    environment:
+      - NODE_ENV=development
+      - VITE_HOST=0.0.0.0
+    depends_on:
+    - json-server
+
+  json-server:
+    build:
+      context: ./fake-data
+      dockerfile: Dockerfile.json-server
+    ports:
+      - "3001:3001"
+    volumes:
+      - ./fake-data/db.json:/data/db.json
+    command: json-server --watch /data/db.json --port 3001

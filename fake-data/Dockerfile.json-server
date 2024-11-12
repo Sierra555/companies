@@ -1,0 +1,11 @@
+FROM node:16
+
+RUN npm install -g json-server
+
+WORKDIR /fake-data
+
+COPY db.json /fake-data/db.json
+
+EXPOSE 3001
+
+CMD ["json-server", "--watch", "/data/db.json", "--port", "3001"]
