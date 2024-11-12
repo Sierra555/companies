@@ -27,6 +27,7 @@ A web application built with React and Tailwind CSS that displays information on
 ## Technologies
 
 - **React**: Component-based UI library.
+- **Vite**: Next-generation, fast build tool for React applications.
 - **TypeScript**: Type-safe JavaScript for improved development.
 - **Tailwind CSS**: Utility-first CSS framework for creating responsive, mobile-friendly designs.
 - **Docker & Docker Compose**: Containerize the app for easy deployment and setup.
@@ -43,7 +44,7 @@ Ensure you have [Docker](https://www.docker.com/) and [Docker Compose](https://d
 
 1. **Clone the repository**:
    ```bash
-   git clone 
+   git clone https://github.com/Sierra555/companies.git
    cd companies
    ```
 
@@ -65,6 +66,7 @@ If you prefer to run the application without Docker, make sure you have Node.js 
 npm install
 npm run dev
 ```
+The application is set up using [Vite](https://vitejs.dev/), so the development server will start on `http://localhost:5173`.
 
 ## Usage
 
